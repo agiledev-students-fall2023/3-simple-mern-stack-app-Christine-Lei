@@ -40,6 +40,20 @@ app.get('/messages', async (req, res) => {
   }
 })
 
+// fetching info about_us 
+app.get('/About_Us', async (req, res) => {
+  res.json({
+    paragraphs: [
+      "Hello and welcome!",
+      "My name is Christine Lei, a senior at NYU studying Computer Science and Data Science.",
+      "A little about me: I was born and raised in Taiwan. When I am not busy trying to find a job (please hire me) or struggling with assignments, you will find me bouldering (probably spend too much time), biking, running, cooking (and baking!!! I have too much oats) and reading manga (my favoriate includes but not limited to Haikyuu (any sports manga in general), HunterXHunter, and Spy family).",
+      "Come say hi! I won't bite"
+    ],
+  })
+  imageURL: "/christine.jpg"
+});
+
+
 // a route to handle fetching a single message by its id
 app.get('/messages/:messageId', async (req, res) => {
   // load all messages from database
